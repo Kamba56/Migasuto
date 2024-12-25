@@ -7,7 +7,7 @@ import { Link } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 
-const SignUp = () => {
+const Login = () => {
   return (
     <section className="bg-white p-2 xl:p-9 flex justify-center items-center h-screen">
       <section className="bg-transparent h-full w-full lg:max-h-[1024px] max-w-[1440px] flex flex-col lg:flex-row">
@@ -32,10 +32,10 @@ const SignUp = () => {
 
             <div className="flex flex-row gap-0 p-1 bg-grey-10 rounded-lg">
               <div className="w-1/2">
-                <Link to='/auth/signup' className="flex justify-center w-full items-center gap-3 px-8 py-2 text-base font-medium cursor-pointer text-white bg-blue-10 rounded-lg">Signup</Link>
+                <Link to='/auth/signup' className="flex justify-center w-full items-center gap-3 px-8 py-2 text-base font-medium cursor-pointer text-grey-20 bg-grey-10 rounded-lg">Signup</Link>
               </div>
               <div className="w-1/2">
-                <Link to='/auth/login' className="flex justify-center w-full items-center gap-3 px-8 py-2 text-base font-medium cursor-pointer text-grey-20 bg-grey-10 rounded-lg">Login</Link>
+                <Link to='/auth/login' className="flex justify-center w-full items-center gap-3 px-8 py-2 text-base font-medium cursor-pointer text-white bg-blue-10 rounded-lg">Login</Link>
               </div>
             </div>
 
@@ -46,36 +46,14 @@ const SignUp = () => {
               <div className="w-full flex flex-col gap-2 relative">
                 <TextField fieldName={'Password'} placeholder={'Enter Password'} type={'password'} />
                 <div className="flex gap-2 items-center">
-                  <div className="text-grey-20">
-                    <BsCheck2 />
-                  </div>
-                  <p className="text-xs">Password Strength : Weak</p>
+                  <p className="text-xs">I don’t have account? <Link to='/auth/signup' className="text-blue-20">Signup</Link></p>
                 </div>
-                <div className="flex gap-2 items-center">
-                  <div className="text-grey-20">
-                    <BsCheck2 />
-                  </div>
-                  <p className="text-xs">Cannot contain your name or email address</p>
-                </div>
-                <div className="flex gap-2 items-center">
-                  <div className="text-grey-20">
-                    <BsCheck2 />
-                  </div>
-                  <p className="text-xs">At least 8 characters</p>
-                </div>
-                <div className="flex gap-2 items-center">
-                  <div className="text-grey-20">
-                    <BsCheck2 />
-                  </div>
-                  <p className="text-xs">Contains a number or symbol</p>
-                </div>
-
                 <div>
                   <Link className="text-grey-20 text-xs absolute underline capitalize top-1 right-0">forgot password?</Link>
                 </div>
               </div>
 
-              <BlueButton btnName={"Create Account"} />
+              <BlueButton btnName={"Login"} />
 
               <div className="flex items-center justify-center text-grey-20 before:absolute relative after:absolute before:w-1/3 before:h-[1px] before:bg-grey-20  font-medium before:right-8 after:w-1/3 after:h-[1px] after:bg-grey-20 after:left-8 opacity-30">OR</div>
 
@@ -102,4 +80,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp;
+export default Login;
